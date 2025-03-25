@@ -1,0 +1,173 @@
+How to Upload a Folder to GitHub (Step-by-Step Guide)
+
+What is GitHub and Why Should You Use It?
+GitHub is a website where you can store your projects, including files and folders, safely on the internet. By uploading your projects to GitHub, you make sure they are backed up, and you can access them from any device, anytime. It's especially useful if you want to look back at your work as you grow and learn.
+
+Step 1: Create a GitHub Account (If You Don’t Have One)
+Before you can upload your folder to GitHub, you need to create an account.
+
+Go to GitHub.
+
+Click on Sign up in the top right corner.
+
+Follow the steps to create a username and password.
+
+Once you’ve created your GitHub account, you’re ready to upload your folder!
+
+Step 2: Create a New Repository on GitHub
+A repository (repo for short) is where you store all your files and folders on GitHub. Think of it as a folder for your projects on GitHub.
+
+How to Create a Repository:
+Once logged in to GitHub, click the + sign in the top-right corner and select New repository.
+
+Enter a repository name (for example, Obsidian Vault).
+
+You can leave the description empty or give it a name that helps describe what your project is about.
+
+Choose Public or Private based on whether you want your repository to be visible to others. If it’s private, only you and people you invite can see it.
+
+Do not check the box that says Initialize this repository with a README because you’ll be uploading your existing folder.
+
+Click Create repository.
+
+Once the repository is created, you will see the URL of your repository. This will look something like:
+
+arduino
+Copy
+https://github.com/your-username/Obsidian-Vault.git
+Keep this URL in mind, as you'll need it later.
+
+Step 3: Install Git (If Not Already Installed)
+Git is a version control tool that helps track changes in your project and lets you push files to GitHub.
+
+How to Install Git:
+Go to Git Downloads.
+
+Download the version for your operating system (Windows, macOS, or Linux).
+
+Follow the installation instructions for your OS.
+
+After installing, you can check if Git is installed by opening Git Bash (on Windows) or Terminal (on macOS/Linux) and typing:
+
+bash
+Copy
+git --version
+If Git is installed correctly, you should see something like:
+
+nginx
+Copy
+git version 2.x.x
+Step 4: Set Up Git on Your Computer
+Now that you have Git installed, you need to set it up on your computer.
+
+How to Set Up Git:
+Open Git Bash (on Windows) or Terminal (on macOS/Linux).
+
+Set your username and email (used for commits) by running the following commands:
+
+bash
+Copy
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+Replace "Your Name" and "your-email@example.com" with your actual name and email.
+
+Step 5: Navigate to Your Folder
+Now, you want to upload your "Daniel Azuonye" folder to GitHub. The first step is to navigate to where that folder is located on your computer.
+
+Open Git Bash (Windows) or Terminal (macOS/Linux).
+
+If your folder is on the D drive, type:
+
+bash
+Copy
+D:
+This will switch your terminal to the D drive.
+
+Now, navigate to your "Daniel Azuonye" folder. If your folder is located directly on the D drive, use:
+
+bash
+Copy
+cd "D:/Daniel Azuonye"
+The cd command stands for "change directory". If your folder is inside another folder, replace "D:/Daniel Azuonye" with the correct path.
+
+Step 6: Initialize Git in Your Folder
+You need to tell Git to start tracking this folder. This is called initializing a Git repository.
+
+In Git Bash or Terminal, type:
+
+bash
+Copy
+git init
+This will create a new Git repository in your folder, allowing you to track changes and push it to GitHub.
+
+Step 7: Link Your Local Folder to Your GitHub Repository
+Now, you need to link your local folder (on your computer) to the repository you created on GitHub.
+
+Go back to the GitHub repository you created earlier (e.g., Obsidian Vault).
+
+Copy the repository URL (it will look like https://github.com/your-username/Obsidian-Vault.git).
+
+In Git Bash (or Terminal), run the following command to link your folder to your GitHub repository:
+
+bash
+Copy
+git remote add origin https://github.com/your-username/Obsidian-Vault.git
+Replace your-username with your GitHub username and Obsidian-Vault with the name of your repository.
+
+Step 8: Add the Folder to Git
+Now, you’ll tell Git to track the folder (and all its contents). This means Git will monitor the folder and track any changes you make to it.
+
+Run the following command to add your folder to Git:
+
+bash
+Copy
+git add "Daniel Azuonye"
+This command stages the "Daniel Azuonye" folder and its contents for commit.
+
+Step 9: Commit Your Changes
+A commit is like a save point. After you add your folder, you’ll make a commit to record the changes.
+
+To commit your changes, run the following command:
+
+bash
+Copy
+git commit -m "Add 'Daniel Azuonye' folder to Obsidian Vault"
+The -m flag allows you to write a message that describes what changes you’re committing. Here, the message explains that you added the "Daniel Azuonye" folder.
+
+Step 10: Push Your Folder to GitHub
+Now, you’re ready to upload your folder to GitHub!
+
+Run the following command to push your folder to your GitHub repository:
+
+bash
+Copy
+git push origin main
+This command uploads the folder to GitHub. If you’re using a branch other than main, replace main with the name of your branch (sometimes it might be master).
+
+Bonus: Track Empty Folders
+Git doesn’t track empty folders by default. If you have an empty folder you want to upload, you can create a file called .gitkeep inside it. This will make Git track the empty folder.
+
+To create the .gitkeep file, run:
+
+bash
+Copy
+touch "Daniel Azuonye/.gitkeep"
+git add "Daniel Azuonye/.gitkeep"
+git commit -m "Add empty folder 'Daniel Azuonye' with .gitkeep"
+git push origin main
+Summary of Commands:
+bash
+Copy
+D:
+cd "D:/Daniel Azuonye"
+git init
+git remote add origin https://github.com/your-username/Obsidian-Vault.git
+git add "Daniel Azuonye"
+git commit -m "Add 'Daniel Azuonye' folder to Obsidian Vault"
+git push origin main
+Conclusion:
+By following these steps, you’ve successfully uploaded your "Daniel Azuonye" folder to GitHub! Now, you have a backup of your folder online, and you can access it anytime from any device.
+
+GitHub also allows you to keep track of changes over time, so if you want to see how your folder has evolved, you can easily view the history of commits.
+
+This guide helps you store your work safely and ensures you have access to it in the future.
